@@ -1,0 +1,41 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.columns{
+    width: 80%;
+    justify-content: space-between;
+    columns: 3;
+    display: flex;
+}
+
+header{
+    background-color: black;
+    color: orange;
+    text-align: center;
+}
+
+h1{
+    padding-top: 2%;
+}
+
+.fluide{
+    width: 80%;
+}
+
+.presentation{
+    background-color: gray;
+    display: block;
+    margin-top: 5%;
+    width: 20%;
+}
+
+footer{
+
+    margin-top: 10%;
+    background-color: black;
+    text-align: center;
+    color: red;
+    padding: 50px;
+}

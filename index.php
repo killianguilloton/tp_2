@@ -12,7 +12,32 @@
 
 include "en-tete.php";
 
-echo("page accueil");
+include "bd.php";
+
+    $sth = $dbh->prepare("SELECT 'id_biere', `nom`, `nom_micro-brasserie`, `type_biere` from `biere_1932675`;");
+	$sth->execute();
+    $bieres = $sth->fetchAll();
+
+    foreach($bieres as $biere) {
+
+?>
+
+<main class="columns">
+        <div class="presentation">
+        <img src="imgs/placeholder.jpg" class='fluide'>
+			<h4>
+			<a href="detail-biere.php?id_biere= <?=$biere['id_biere']?>"><?=$biere['nom']?></a>
+			</h4>
+            <a>micro-brasserie</a>
+			<p><?=$biere['nom_micro-brasserie']?></p>
+            <a>type</a>
+			<p><?=$biere['type_biere']?></p>
+		</div>
+    
+</main>
+<?php
+
+}
 
 include "pied-page.php";
 

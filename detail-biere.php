@@ -11,6 +11,8 @@
 <?php
 
 include "en-tete.php";
+
+echo($_GET['id_biere']);
 ?>
 
 <div class="espacement">
@@ -18,6 +20,8 @@ include "en-tete.php";
 		<a href="administration/modifier-biere-traitement.php" title="">Modifier cette bière</a> |
 	
 </div>
+
+
 
 
 <?php
