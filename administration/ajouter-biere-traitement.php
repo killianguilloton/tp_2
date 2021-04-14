@@ -28,7 +28,7 @@ try {
 
 ?>
 
-<div class="centrer centrer-text">
+<div>
 
     <?php
         if ($sth->execute()) {

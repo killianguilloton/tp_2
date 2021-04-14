@@ -11,6 +11,7 @@
 <?php
 
 include "en-tete.php";
+include "../bd.php";
 
 ?>
 
