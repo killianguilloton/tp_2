@@ -12,7 +12,32 @@
 
 include "en-tete.php";
 
-echo("page effacer bière traitement");
+include "../bd.php";
+
+$idBiere = $_GET['id_biere'];
+
+try {
+
+    $sth = $dbh->prepare("DELETE FROM `biere` WHERE `id_biere` = :id_biere;");
+    $sth->bindParam(':id_biere', $idBiere, PDO::PARAM_INT);
+    $sth->execute();
+
+    ?>
+
+    <div>
+    <?php
+    if ($sth->execute()) {
+        echo("succès lors de la suppression");
+    } else {
+        echo("erreur lors de la suppression");
+    }
+    ?>
+    </div>
+    <?php
+
+} catch (\Throwable $e) {
+    echo("erreur de la suppression");
+}
 
 include "../pied-page.php";
 

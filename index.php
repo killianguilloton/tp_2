@@ -14,7 +14,7 @@ include "en-tete.php";
 
 include "bd.php";
 
-    $sth = $dbh->prepare("SELECT 'id_biere', `nom`, `nom_micro-brasserie`, `type_biere` from `biere_1932675`;");
+    $sth = $dbh->prepare("SELECT 'id_biere', `nom`, `nom_micro-brasserie`, `type_biere`, `image` from `biere_1932675`;");
 	$sth->execute();
     $bieres = $sth->fetchAll();
 
@@ -24,7 +24,7 @@ include "bd.php";
 
 <main class="columns">
         <div class="presentation">
-        <img src="imgs/placeholder.jpg" class='fluide'>
+        <img src="imgs/<?=$biere['image']?>" alt="image bière" class="fluide">
 			<h4>
 			<a href="detail-biere.php?id_biere= <?=$biere['id_biere']?>"><?=$biere['nom']?></a>
 			</h4>
