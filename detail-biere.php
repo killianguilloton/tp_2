@@ -24,6 +24,8 @@ include "bd.php";
 <?php
 
 include "en-tete.php";
+
+include "bd.php";
 ?>
 
 <div>
@@ -36,8 +38,8 @@ include "en-tete.php";
 </div>
 
 <div>
-		<a href="administration/effacer-biere-traitement.php?id_biere<?=$biere['id_biere']?>" title="">Supprimer cette bière</a> |
-		<a href="administration/modifier-biere-traitement.php" title="">Modifier cette bière</a> |
+		<a href="administration/effacer-biere-traitement.php?id_biere<?=$biere['id_biere']?>">Supprimer cette bière</a> 
+		<a href="administration/modifier-biere.php?id_biere<?=$biere['id_biere']?>">Modifier cette bière</a> 
 	
 </div>
 
