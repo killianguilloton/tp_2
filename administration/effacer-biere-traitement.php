@@ -29,7 +29,7 @@ try {
     if ($sth->execute()) {
         echo("succès lors de la suppression");
     } else {
-        echo("erreur lors de la suppression");
+        echo("petite erreur lors de la suppression");
     }
     ?>
     </div>
