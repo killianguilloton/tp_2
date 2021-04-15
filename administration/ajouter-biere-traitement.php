@@ -15,16 +15,15 @@ include "../bd.php";
 
 
 try {
-    $sth = $dbh->prepare("INSERT INTO `biere_1932675`(`nom`, `nom_micro-brasserie`, `type_biere`, `degres_alcool`, `description`, `image`, `type_contenant`) VALUES ([:nom],[:nom_micro-brasserie],[:type_biere],[:degres_alcool],[:description],[:image],[:type_contenant])");
+    $sth = $dbh->prepare("INSERT INTO `biere_1932675`(`nom`, `nom_micro-brasserie`, `type_biere`, `degres_alcool`, `description`, `image`, `type_contenant`) VALUES (:nom,:nom_micro_brasserie,:type_biere,:degres_alcool,:description,:image,:type_contenant)");
 
     $sth->bindParam(':nom', $_POST['nom'], PDO::PARAM_STR);
-    $sth->bindParam(':nom_micro-brasserie', $_POST['nom_micro-brasserie'], PDO::PARAM_STR);
+    $sth->bindParam(':nom_micro_brasserie', $_POST['nom_micro_brasserie'], PDO::PARAM_STR);
     $sth->bindParam(':type_biere', $_POST['type_biere'], PDO::PARAM_STR);
     $sth->bindParam(':degres_alcool', $_POST['degres_alcool'], PDO::PARAM_STR);
     $sth->bindParam(':description', $_POST['description'], PDO::PARAM_STR);
     $sth->bindParam(':image', $_POST['image'], PDO::PARAM_STR);
     $sth->bindParam(':type_contenant', $_POST['type_contenant'], PDO::PARAM_STR);
-    $sth->bindParam(':id_biere', $_POST['id_biere'], PDO::PARAM_INT);
 
 ?>
 
@@ -32,9 +31,9 @@ try {
 
     <?php
         if ($sth->execute()) {
-            echo("Succès lors de la modification de la bière.");
+            echo("Succès lors de la création de la bière.");
         } else {
-            echo("Erreur lors de la modification de la bière.");
+            echo("petite erreur lors de la création de la bière.");
         }
     ?>
 
@@ -42,8 +41,9 @@ try {
 
 <?php
 
-} catch (\Throwable $th) {
-    echo("erreur lors de la modification de la bière");
+} catch (\Throwable $e) {
+    echo("erreur lors de la création de la bière");
+    echo($e->getMessage());
 }
 
 include "../pied-page.php";

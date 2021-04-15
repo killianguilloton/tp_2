@@ -18,13 +18,12 @@ include "bd.php";
 	$sth->execute();
     $bieres = $sth->fetchAll();
 
-    print_r($bieres);
-
     foreach($bieres as $biere) {
 
 ?>
 
 <main class="columns">
+
         <div class="presentation">
         <img src="imgs/<?=$biere['image']?>" alt="image bière" class="fluide">
 			<h4>

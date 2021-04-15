@@ -17,18 +17,18 @@ include "../bd.php";
 
     <section>
         <h2>Ajouter une bière</h2>
-        <form action="modifier-biere-traitement.php" method="post">
+        <form action="ajouter-biere-traitement.php" method="post">
             <div>
                 <label for="nom">Nom :</label>
                 <input type="text" name="nom" id="nom"/>
             </div>
             <div>
-                <label for="micro-brasserie">Micro-brasserie :</label>
-                <textarea name="micro-brasserie" id="micro-brasserie"></textarea>
+                <label for="nom_micro_brasserie">Micro-brasserie :</label>
+                <textarea name="nom_micro_brasserie" id="nom_micro_brasserie"></textarea>
             </div>
             <div>
-                <label for="type-de-biere">type de biere :</label>
-                <input type="text" name="type-de-biere" id="type-de-biere"/>
+                <label for="type_biere">type de biere :</label>
+                <input type="text" name="type_biere" id="type_biere"/>
             </div>
             <div>
                 <label for="degres_alcool">Degres d'alcool:</label>
@@ -46,7 +46,7 @@ include "../bd.php";
                 <label for="type_contenant">Type contenant :</label>
                 <input type="text" name="type_contenant" id="type_contenant"/>
             </div>
-            <input type="submit" value="Modifier le film">
+            <input type="submit" value="Ajouter la bière">
             <input type="hidden" name="id_biere" value="<?=$_GET['id_biere']?>">                
         </form>
     </section>
