@@ -28,7 +28,24 @@ h1{
     background-color: gray;
     display: block;
     margin-top: 5%;
+    margin-left: 50%;
     width: 20%;
+    text-align: center;
+    padding: 2%;
+}
+
+.center{
+    margin: 10%;
+    text-align: center;
+}
+
+.space-top{
+    margin-top: 2%;
+}
+
+.lien{
+    color: white;
+    list-style: none;
 }
 
 footer{
@@ -36,6 +53,6 @@ footer{
     margin-top: 10%;
     background-color: black;
     text-align: center;
-    color: red;
+    color: orange;
     padding: 50px;
 }

@@ -28,16 +28,16 @@ include "en-tete.php";
 include "bd.php";
 ?>
 
-<div>
+<div class="center">
     <img src="imgs/<?=$biere['image']?>" alt="image bière">
     <h4><?=$biere['nom']?></h4>
     <p><?=$biere['nom_micro-brasserie']?></p>
     <p><?=$biere['type_biere']?></p>
-    <p><?=$biere['degres_alcool']?></p>
+    <p><?=$biere['degres_alcool']?>%</p>
     <p><?=$biere['description']?></p>
 </div>
 
-<div>
+<div class="center">
 		<a href="administration/effacer-biere-traitement.php?id_biere=<?=$biere['id_biere']?>">Supprimer cette bière</a> 
 		<a href="administration/modifier-biere.php?id_biere=<?=$biere['id_biere']?>">Modifier cette bière</a> 
 	
