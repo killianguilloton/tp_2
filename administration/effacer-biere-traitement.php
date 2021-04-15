@@ -22,7 +22,7 @@ try {
     $sth->bindParam(':id_biere', $idBiere, PDO::PARAM_INT);
     $sth->execute();
 
-    ?>
+?>
 
     <div>
     <?php
@@ -33,7 +33,8 @@ try {
     }
     ?>
     </div>
-    <?php
+
+<?php
 
 } catch (\Throwable $e) {
     echo("erreur de la suppression");

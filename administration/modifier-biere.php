@@ -51,7 +51,6 @@ include "../bd.php";
         </form>
     </section>
 
-
 <?php
 
 include "../pied-page.php";

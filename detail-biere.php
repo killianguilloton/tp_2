@@ -43,9 +43,6 @@ include "bd.php";
 	
 </div>
 
-
-
-
 <?php
 
 include "pied-page.php";

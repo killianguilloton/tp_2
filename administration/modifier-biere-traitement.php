@@ -45,7 +45,6 @@ try {
     echo($e->getMessage());
 }
 
-
 include "../pied-page.php";
 
 ?>
